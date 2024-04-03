@@ -100,14 +100,15 @@ let start = Math.round(Math.random() * (10 - 1) + 1); // creates a random number
 let end = Math.round(Math.random() * (1000 - 100) + 100); // creates a random number between 100 and 1000
 
 for(let i = start; i <= end; i++) {
-    let print = "";
-
+    if(i % fizzDivisor == 0 && i % buzzDivisor == 0) {
+        console.log("FIZZBUZZ", i);
+    }
     if(i % fizzDivisor == 0) {
-        print += "FIZZ";
+        console.log("FIZZ", i);
     }
     if(i % buzzDivisor == 0) {
-        print += "BUZZ";
+        console.log("BUZZ", i);
     }
-    console.log(`${i} ${print}`);
 }
-console.log(fizzDivisor, buzzDivisor);
+console.log("fizzDivisor:", fizzDivisor);
+console.log("buzzDivisor:", buzzDivisor);
